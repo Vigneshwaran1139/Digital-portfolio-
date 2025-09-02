@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vigneshwaran N - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #ffffff);
+      color: #1b263b;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0d47a1, #1976d2);
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #ffcc80;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #1565c0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #ff9800;
+    }
+    section {
+      padding: 50px 20px;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    .card {
+      background: #fff;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+    }
+    .home-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-direction: column;
+    }
+    .home-content img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ff9800;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    h2 {
+      color: #1565c0;
+      margin-bottom: 15px;
+    }
+    button, a button {
+      padding: 12px 18px;
+      background: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    button:hover, a button:hover {
+      background: #e65100;
+    }
+    ul {
+      list-style: disc;
+      margin-left: 25px;
+      padding: 0;
+    }
+    ul li {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vigneshwaran N</h1>
+    <p>Software Engineering Student | Athlete (100m & 200m)</p>
+  </header>
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('about')">About Me</a>
+    <a href="#" onclick="showPage('education')">Education</a>
+    <a href="#" onclick="showPage('skills')">Skills</a>
+    <a href="#" onclick="showPage('extracurricular')">Extra-Curricular</a>
+    <a href="#" onclick="showPage('sports')">Sports</a>
+    <a href="#" onclick="showPage('certificates')">Certificates</a>
+    <a href="#" onclick="showPage('resume')">Resume</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+  </nav>
+
+  <!-- 🌙 Mode Toggle -->
+  <div style="position: fixed; top: 15px; right: 15px; z-index:1000;">
+    <button onclick="toggleMode()" id="modeBtn">🌙 Dark</button>
+  </div>
+
+  <!-- Home -->
+  <section id="home" class="active">
+    <div class="card home-content">
+      <img src="vicky-01.jpeg" alt="My Photo">
+      <h2>Welcome!</h2>
+      <p>Hello, I’m <b>Vigneshwaran</b>. Explore the tabs above to know more about my education, skills, extra-curricular activities, sports achievements, and professional journey.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <ul>
+        <li>Currently pursuing <b>B.Sc. Computer Science</b> at Bharathiar University.</li>
+        <li>Interested in software engineering, web development, and emerging technologies.</li>
+        <li>Dedicated athlete with strong commitment to discipline and consistency.</li>
+        <li>Seeking to combine academic learning with real-world application development.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="card">
+      <h2>Education</h2>
+      <ul>
+        <li><b>B.Sc. Computer Science</b> – Government Arts and Science College, Avinashi  
+            <br>• Year: 2024 – 2027 (pursuing degree)
+            <br>• Focus: Software Engineering, Data Structures, Programming</li>
+        <li><b>Higher Secondary Education</b> – Government Boys Higher Secondary School, Avinashi, Tiruppur, Tamil Nadu  
+            <br>• Stream: Computer Science  
+            <br>• Completed: 2023</li>
+        <li><b>SSLC</b> – Government Boys Higher Secondary School, Avinashi, Tiruppur, Tamil Nadu  
+            <br>• Focus on Science and Mathematics  
+            <br>• Completed: 2021</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="card">
+      <h2>Skills</h2>
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Programming: Java, C, Python</li>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>Database: MySQL</li>
+        <li>Software Engineering concepts: Process Models, Requirement Analysis</li>
+      </ul>
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Problem Solving and Critical Thinking</li>
+        <li>Time Management</li>
+        <li>Teamwork and Collaboration</li>
+        <li>Adaptability and Leadership</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Extra-Curricular -->
+  <section id="extracurricular">
+    <div class="card">
+      <h2>Extra-Curricular Activities</h2>
+      <ul>
+        <li>Volunteered in college fests and cultural events.</li>
+        <li>Organized technical workshops and coding sessions.</li>
+        <li>Active participant in debate and quiz competitions.</li>
+        <li>Member of the student council, contributing to event planning and student welfare.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Sports -->
+  <section id="sports">
+    <div class="card">
+      <h2>Sports</h2>
+      <ul>
+        <li>Specialized in 100m and 200m sprint events.</li>
+        <li>Participated in inter-college athletics competitions.</li>
+        <li>Daily fitness training focusing on endurance and strength.</li>
+        <li>Achieved recognition in multiple district-level and state-level events.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates">
+    <div class="card">
+      <h2>Certificates</h2>
+      <ul>
+        <li>District Athletics Meet – 100m (Participation Certificate)</li>
+        <li>Inter-College Sports Fest – 200m Sprint (Merit Certificate)</li>
+        <li>Annual Sports Meet – Track Events (Winner’s Certificate)</li>
+        <li>Overview of English from Laniquill</li>
+      </ul>
+      <div style="margin-top:20px;">
+        <h3>My Certificates</h3>
+        <img src="IMG20250320120720.jpg" alt="Certificate 1" style="width:300px; margin:10px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <img src="IMG20250127084008.jpg" alt="Certificate 2" style="width:300px; margin:10px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <img src="IMG_20250901_183856.jpg" alt="Certificate 3" style="width:300px; margin:10px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <div class="card">
+      <h2>Resume</h2>
+      <p>You can view or download my resume here:</p>
+      <a href="vigneshresume.pdf" target="_blank"><button>📄 View Resume (PDF)</button></a>
+      <hr>
+      <h3>Quick Resume Highlights:</h3>
+      <ul>
+        <li><b>Name:</b> Vigneshwaran N</li>
+        <li><b>Email:</b> vignesh1139x@gmail.com</li>
+        <li><b>Phone:</b> 6375466243</li>
+        <li><b>Location:</b> Tiruppur, Tamil Nadu, India</li>
+        <li><b>Education:</b> B.Sc. Computer Science</li>
+        <li><b>Skills:</b> Java, Web Development, Software Engineering</li>
+        <li><b>Sports:</b> 100m & 200m Sprinter</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="card">
+      <h2>Contact Me</h2>
+      <ul>
+        <li><b>Email:</b> vignesh1139x@gmail.com</li>
+        <li><b>Phone:</b> 6375466243</li>
+        <li><b>Location:</b> Tiruppur, Tamil Nadu, India</li>
+        <li><b>LinkedIn:</b> <a href="#" target="_blank">linkedin.com/in/vigneshwaran</a></li>
+        <li><b>GitHub:</b> <a href="#" target="_blank">https://github.com/Vigneshwaran1139</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    // Show sections
+    function showPage(pageId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(pageId).classList.add("active");
+    }
+
+    // 🌙 Dark/Light Mode Toggle
+    let dark = false;
+    function toggleMode() {
+      dark = !dark;
+      if (dark) {
+        document.body.style.background = "linear-gradient(135deg, #1e1e1e, #2c2c2c)";
+        document.body.style.color = "#f5f5f5";
+        document.querySelectorAll(".card").forEach(c => {
+          c.style.background = "#333";
+          c.style.color = "#f5f5f5";
+        });
+        document.getElementById("modeBtn").innerText = "☀️ Light";
+      } else {
+        document.body.style.background = "linear-gradient(135deg, #f0f4f8, #ffffff)";
+        document.body.style.color = "#1b263b";
+        document.querySelectorAll(".card").forEach(c => {
+          c.style.background = "#fff";
+          c.style.color = "#1b263b";
+        });
+        document.getElementById("modeBtn").innerText = "🌙 Dark";
+      }
+    }
+  </script>
+</body>
+</html>
